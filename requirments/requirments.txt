@@ -1,6 +1,7 @@
 colorama==0.3.7
 Django==1.9.5
 django-markdown==0.8.4
+django-solo==1.1.2
 docutils==0.12
 droopescan==1.34.6
 futures==3.0.5
