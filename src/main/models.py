@@ -42,7 +42,7 @@ class Post(models.Model):
     description = models.CharField(max_length=256)
     body = models.TextField()
     slug = models.SlugField(max_length=200, unique=True)
-    tag = models.ManyToManyField(Tag, )
+    tag = models.ManyToManyField(Tag)
     rubrica = models.ForeignKey(Rubric)
     publish = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)

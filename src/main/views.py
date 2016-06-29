@@ -1,7 +1,8 @@
 from django.views.generic import TemplateView
 from django.shortcuts import render
 from django.views import generic
-from . import models
+from main.models import *
+from datetime import datetime
 
 
 class IndexView(TemplateView):
@@ -9,8 +10,11 @@ class IndexView(TemplateView):
 
     def get(self, request):
 
+        posts = Post.objects.filter(publish=True)
+
         return self.render_to_response({
             'title': 'coffe and cake',
+            'posts': posts,
         })
 
 

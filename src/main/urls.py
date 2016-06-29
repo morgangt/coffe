@@ -19,7 +19,5 @@ from django.contrib import admin
 from . import views
 
 urlpatterns = [
-    url(r'^admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
-    url(r'^coffe-admin/', include(admin.site.urls)),
     url(r'^$', views.Index.as_view(), name="index"),
 ]
